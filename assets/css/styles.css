@@ -41,6 +41,7 @@ button {
     padding: 0 20px;
     min-width: 205px;
     line-height: 60px;
+    height: 60px;
     text-align: center;
     border-radius: 999px;
 }
@@ -48,6 +49,23 @@ button {
 .btn:hover {
     opacity: 0.9;
     cursor: pointer;
+}
+
+.section-heading {
+    color: #10375c;
+    font-family: Sora;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.1rem;
+}
+
+.section-desc {
+    color: #575f66;
+    font-family: Sora;
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.66;
 }
 
 /* Header */
@@ -187,6 +205,7 @@ button {
 .block-ctn__btn {
     font-size: 1.6rem;
     min-width: 108px;
+    height: 44px;
     line-height: 44px;
 }
 
@@ -258,4 +277,89 @@ button {
 .hero-image__info--large {
     width: 210px;
     height: 410px;
+}
+
+.service {
+    margin-top: 140px;
+    padding: 30px 0;
+}
+
+.section-desc,
+.service-heading {
+    margin: 0 auto;
+    text-align: center;
+    width: 40%;
+}
+
+.section-desc {
+    margin-top: 18px;
+}
+
+.service__row {
+    display: flex;
+    align-items: center;
+    margin-top: 70px;
+    justify-content: space-between;
+}
+
+.service__img {
+    width: 570px;
+    height: 570px;
+    border-radius: 1.2rem;
+    object-fit: cover;
+}
+
+.service-item {
+    display: flex;
+    width: 470px;
+    padding: 21px 22px;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.service-item:hover {
+    color: #fff;
+    position: relative;
+    box-shadow: 0px 14px 28px 0px rgba(0, 0, 0, 0.05);
+}
+
+.service-item:hover .service-item__icon-wrap {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.service-item__icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-right: 19px;
+    color: #10375c;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #eff6fd;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
+}
+
+
+
+.service-item__title {
+    color: #10375c;
+    font-family: Sora;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.service-item__desc {
+    margin-top: 8px;
+    color: #575f66;
+    font-family: Sora;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.service-item__btn {
+    margin-top: 55px;
 }
