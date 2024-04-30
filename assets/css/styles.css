@@ -284,7 +284,7 @@ button {
     padding: 30px 0;
 }
 
-.section-desc,
+.service-desc,
 .service-heading {
     margin: 0 auto;
     text-align: center;
@@ -342,8 +342,6 @@ button {
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.05);
 }
 
-
-
 .service-item__title {
     color: #10375c;
     font-family: Sora;
@@ -362,4 +360,67 @@ button {
 
 .service-item__btn {
     margin-top: 55px;
+}
+
+/* Work */
+.work {
+    margin-top: 170px;
+    padding: 100px 0;
+    background: #f6fbff;
+}
+
+.work__desc {
+    margin-top: 18px;
+    width: 40%;
+}
+
+.work__list {
+    margin-top: 70px;
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.work-item {
+    padding: 43px 42px;
+    background: #fff;
+    border-radius: 4px;
+    border: 16px solid #eaf6ff;
+    transition: 0.25s;
+}
+
+.work-item:hover {
+    transform: translateY(-16px);
+    border-color: #2e80ce;
+}
+
+
+.work-item:hover .work-item__more {
+    color: #2e80ce;
+    font-weight: 400;
+}
+
+
+.work-item__title {
+    margin-top: 18px;
+    color: #10375c;
+    font-size: 2.6rem;
+    font-weight: 600;
+    line-height: 1.38;
+}
+
+.work-item__desc {
+    margin-top: 28px;
+    color: #575f66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.work-item__more {
+    margin-top: 18px;
+    color: #575f66;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
 }
