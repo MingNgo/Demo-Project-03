@@ -29,10 +29,16 @@ a {
     display: block;
 }
 
+button {
+    border: currentColor;
+    background: currentColor;
+}
+
 .btn {
     display: inline-block;
     color: #fff;
     background: var(--primary-color);
+    padding: 0 20px;
     min-width: 205px;
     line-height: 60px;
     text-align: center;
@@ -41,6 +47,7 @@ a {
 
 .btn:hover {
     opacity: 0.9;
+    cursor: pointer;
 }
 
 /* Header */
@@ -104,7 +111,6 @@ a {
 
 .navbar__list {
     display: flex;
-    
 }
 
 .navbar__link {
@@ -117,37 +123,38 @@ a {
     line-height: 1.75;
 }
 
-.navbar__link:hover {
-    font-weight: 400;
-    color: #fff;
-}
 
-.navbar__link::before {
+
+.navbar__link::after {
     content: attr(title);
     display: block;
-    color: #fff;
-    overflow: hidden;
-    visibility: hidden;
     height: 0;
     font-weight: 400;
-}
-
-.navbar__link--active {
-    position: relative;
-    color: #fff;
-    font-family: Sora;
-    font-size: 1.6rem;
-    font-weight: 400;
-    line-height: 1.75;
+    overflow: hidden;
+    visibility: hidden;
 }
 
 .navbar__link--active::before {
+    position: absolute;
+    left: 8px;
     content: "";
-    display: inline-block;
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: red;
+    background: #fff;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: right;
+    color: #fff;
+    font-family: Sora;
+    font-weight: 400;
+    line-height: 1.75;
 }
 
 .block-ctn {
@@ -169,7 +176,7 @@ a {
     color: #fff;
 }
 
-.block-ctn__click::before {
+.block-ctn__click::after {
     content: attr(title);
     display: block;
     color: #fff;
