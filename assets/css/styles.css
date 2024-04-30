@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+:root {
+    --bg-color: #10375c;
+    --primary-color: #2e80ce;
+}
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
@@ -10,4 +15,172 @@ html {
 body {
     font-size: 1.6rem;
     font-family: "Sora", sans-serif;
+}
+
+/* Common */
+.container {
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    display: block;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: var(--primary-color);
+    min-width: 205px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 999px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+/* Header */
+.header {
+    padding-top: 30px;
+    background: var(--bg-color);
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.logo__circle {
+    position: relative;
+    margin-right: 6px;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    background: #2e80ce;
+}
+
+.logo__circle::before {
+    position: absolute;
+    top: 1.1em;
+    right: 0.3em;
+    content: "";
+    width: 1.6em;
+    height: 1.6em;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.logo__text {
+    text-align: right;
+}
+
+.logo__brand {
+    display: block;
+    color: #fff;
+    font-family: Sora;
+    font-size: 1.8em;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.logo__brand--small {
+    color: #fff;
+    font-family: Sora;
+    font-size: 1.2em;
+    font-weight: 300;
+    line-height: 1.16;
+}
+
+.navbar__list {
+    display: flex;
+    
+}
+
+.navbar__link {
+    padding: 8px 21px;
+    color: #c9d2da;
+    font-family: Sora;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.navbar__link:hover {
+    font-weight: 400;
+    color: #fff;
+}
+
+.navbar__link::before {
+    content: attr(title);
+    display: block;
+    color: #fff;
+    overflow: hidden;
+    visibility: hidden;
+    height: 0;
+    font-weight: 400;
+}
+
+.navbar__link--active {
+    position: relative;
+    color: #fff;
+    font-family: Sora;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+.navbar__link--active::before {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: red;
+}
+
+.block-ctn {
+    display: flex;
+    align-items: center;
+    gap: 0 28px;
+}
+
+.block-ctn__click {
+    color: #c9d2da;
+    font-family: Sora;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: 1.75;
+}
+
+.block-ctn__click:hover {
+    font-weight: 400;
+    color: #fff;
+}
+
+.block-ctn__click::before {
+    content: attr(title);
+    display: block;
+    color: #fff;
+    overflow: hidden;
+    visibility: hidden;
+    height: 0;
+    font-weight: 400;
+}
+
+.block-ctn__btn {
+    font-size: 1.6rem;
+    min-width: 108px;
+    line-height: 44px;
 }
