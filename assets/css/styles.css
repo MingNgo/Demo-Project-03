@@ -394,12 +394,10 @@ button {
     border-color: #2e80ce;
 }
 
-
 .work-item:hover .work-item__more {
     color: #2e80ce;
     font-weight: 400;
 }
-
 
 .work-item__title {
     margin-top: 18px;
@@ -423,4 +421,134 @@ button {
     font-size: 1.6rem;
     font-weight: 300;
     line-height: 1.75;
+}
+
+/* features */
+.features {
+    margin-top: 100px;
+    padding: 70px 0;
+}
+
+.features-body {
+    display: flex;
+    align-items: center;
+    gap: 130px;
+}
+
+.features__images {
+    position: relative;
+    display: flex;
+    max-width: 570px;
+    padding-bottom: 121px;
+    padding-right: 58px;
+}
+
+.features__img {
+    width: 512px;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.features__img:nth-child(2) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 332px;
+    height: 370px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.features-content__btn {
+    margin-top: 38px;
+}
+
+/* Member */
+.member {
+    margin-top: 110px;
+    padding: 30px 0;
+}
+
+.member_header {
+    text-align: center;
+}
+
+.member__ctn {
+    margin-top: 38px;
+}
+
+.member__list {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0 30px;
+}
+
+.member-item__img-bg {
+    overflow: hidden;
+    padding-top: 28px;
+    border-radius: 6px;
+    background: #eaf6ff;
+    cursor: pointer;
+}
+
+.member-item__thumb {
+    text-align: center;
+    max-width: 100%;
+    height: 290px;
+    object-fit: cover;
+    display: block;
+    transition: .25s;
+}
+
+.member-item:hover .member-item__thumb {
+    transform: scale(1.1);  
+}
+.member-item__name {
+    margin-top: 12px;
+    color: #10375c;
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 1.75;
+}
+
+.member-item__desc {
+    color: #575f66;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.85;
+}
+.member__control {
+    margin-top: 38px;
+    display: flex;
+    gap: 0 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.member__control--btn {
+    color: #575f66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #575f66;
+    outline: none;
+    transition: 0.25s;
+}
+
+.member__control--btn:hover {
+    cursor: pointer;
+    color: #fff;
+    border-color: #2e80ce;
+    background: #2e80ce;
+}
+
+.member__control--btn:nth-child(2) .member__control--icon {
+    rotate: 180deg;
 }
