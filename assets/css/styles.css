@@ -650,7 +650,6 @@ button {
 .new-item {
     flex: 1;
     border-radius: 12px;
-    overflow: hidden;
     transition: 0.25s;
 }
 
@@ -668,17 +667,18 @@ button {
 }
 
 .new-item__thumb {
-    overflow: hidden;
     height: 172px;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
 }
 
 .new-item__img {
-
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: .25s;
+    transition: 0.25s;
+    border-radius: 12px 12px 0 0;
 }
 
 .new-item__info {
@@ -687,7 +687,7 @@ button {
     border-top: none;
     background: #fff;
     padding: 18px 22px 21px;
-    transition: .25s;
+    transition: 0.25s;
 }
 
 .new-item__title {
@@ -713,4 +713,42 @@ button {
     font-family: Sora;
     font-size: 1.4rem;
     font-weight: 500;
+    transition: 0.25s;
+}
+
+.new-item :hover .new-item__more {
+    color: #2e80ce;
+}
+
+/* appointment */
+.appointment {
+    margin-top: 170px;
+}
+
+.appointment__inner {
+    padding: 100px 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f6fbff;
+}
+
+.appointment__heading,
+.appointment__desc {
+    text-align: center;
+}
+
+.appointment__heading::after {
+    margin-top: 18px;
+    content: "";
+    display: block;
+    margin: 0 339px;
+    width: 136px;
+    height: 2px;
+    background: #2e80ce;
+    margin-top: 18px;
+}
+
+.appointment__btn {
+    margin-top: 38px;
 }
