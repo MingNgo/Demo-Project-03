@@ -68,6 +68,50 @@ button {
     line-height: 1.66;
 }
 
+.control {
+    display: flex;
+    gap: 0 18px;
+    align-items: center;
+}
+
+.member__control {
+    display: flex;
+    justify-content: center;
+    margin-top: 38px;
+}
+
+.control__btn {
+    color: #575f66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #575f66;
+    outline: none;
+    transition: 0.25s;
+}
+
+.control__btn:hover {
+    cursor: pointer;
+    color: #fff;
+    border-color: #2e80ce;
+    background: #2e80ce;
+}
+
+.control__btn:nth-child(2) .control--icon {
+    rotate: 180deg;
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 2);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
 /* Header */
 .header {
     padding: 30px 0 110px;
@@ -520,67 +564,37 @@ button {
     font-weight: 300;
     line-height: 1.85;
 }
-.member__control {
-    margin-top: 38px;
-    display: flex;
-    gap: 0 18px;
-    justify-content: center;
-    align-items: center;
-}
-
-.member__control--btn {
-    color: #575f66;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: #fff;
-    border: 1px solid #575f66;
-    outline: none;
-    transition: 0.25s;
-}
-
-.member__control--btn:hover {
-    cursor: pointer;
-    color: #fff;
-    border-color: #2e80ce;
-    background: #2e80ce;
-}
-
-.member__control--btn:nth-child(2) .member__control--icon {
-    rotate: 180deg;
-}
 
 /* Install */
 .install {
-    margin-top: 170px;
+    margin-top: 225px;
 }
 
 .install__body {
     display: flex;
+    justify-content: space-between;
     border-radius: 4px;
     background: #2e80ce;
+    padding: 0 70px;
 }
 
 .install__images {
     margin-top: -95px;
-    margin-left: 70px;
 }
 
 .install__img {
     display: block;
     width: 284px;
     height: 522px;
+
+    object-fit: cover;
 }
 
 .install-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%;
-    margin-left: 160px;
+    max-width: 586px;
 }
 
 .install-content__title,
@@ -592,12 +606,111 @@ button {
     max-width: 489px;
 }
 
-.install-content__desc {
-    max-width: 586px;
-}
-
 .install-content__ctn {
     margin-top: 38px;
     display: flex;
     gap: 0 28px;
+}
+
+/* News */
+.new {
+    margin-top: 170px;
+}
+
+.new__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.new-content {
+    max-width: 470px;
+}
+
+.new-content__more {
+    margin: 28px 0;
+    color: #10375c;
+    font-family: Inter;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.55;
+}
+
+.new-content__more:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.new__list {
+    display: flex;
+    column-gap: 30px;
+    max-width: 570px;
+}
+
+.new-item {
+    flex: 1;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.new-item:hover {
+    background: #fff;
+    box-shadow: 0px 18px 50px 0px rgba(0, 0, 0, 0.05);
+}
+
+.new-item:hover .new-item__info {
+    border-color: #fff;
+}
+
+.new-item:hover .new-item__img {
+    transform: scale(1.1);
+}
+
+.new-item__thumb {
+    overflow: hidden;
+    height: 172px;
+}
+
+.new-item__img {
+
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .25s;
+}
+
+.new-item__info {
+    border-radius: 0 0 12px 12px;
+    border: 1px solid #e8ebee;
+    border-top: none;
+    background: #fff;
+    padding: 18px 22px 21px;
+    transition: .25s;
+}
+
+.new-item__title {
+    color: #10375c;
+    font-family: Sora;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.62;
+}
+
+.new-item__desc {
+    margin-top: 10px;
+    color: #575f66;
+    font-family: Sora;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.71;
+}
+
+.new-item__more {
+    margin-top: 12px;
+    color: #10375c;
+    font-family: Sora;
+    font-size: 1.4rem;
+    font-weight: 500;
 }
